@@ -1,17 +1,10 @@
 
-//it is better to create own server
-// the browser DB
 
+// the browser DB
 // no raltional DB - NOSQL
 
 
-// 1 = create a inexedDB
-
-// open and defined
-//for transaction - variable should be DEFINED AND CLOSED
-
 // var db = null
-
 // let db
 
 //'strict' by DEAFAULT IN MODULES + CLASSES
@@ -81,7 +74,7 @@ const request = indexedDB.open(input1, input2)
 request.onupgradeneeded = e => {
     //open the exisiting db
     //error - we created dtbase as a new variable 
-    //be default GLOBAL
+    //by default GLOBAL
     dtb = e.target.result
     const pNotes = dtb.createObjectStore('notes_personal',{keyPath: 'title'})
     const toDo_List = dtb.createObjectStore('toDoList',{keyPath: 'title'})
@@ -110,14 +103,7 @@ request.onerror = e => {
 }
 
 
-// function anc(){}
-
 //CREATE ONLY IN UPGRADE!
-
-
-
-//THE PROBLEM WAS WITH DB!
-//TRY WITH CONST DB
 
 
 
